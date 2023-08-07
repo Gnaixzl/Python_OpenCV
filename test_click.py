@@ -67,6 +67,9 @@ def click_mod(zoom=3, loc=0.0, scale=0.45, size=(2000, 2)):
             x_int[t] = (x_int[t] * 0.218)
         if abs(y_int[t]) > zoom:
             y_int[t] = (y_int[t] * 0.228)
+        if (abs(x_int[t]) + abs(y_int[t])) > zoom * 1.55:
+            x_int[t] = (int(x_int[t] * 0.218))
+            y_int[t] = (int(y_int[t] * 0.228))
 
     # 合并数据
     mod_data = np.array(list(zip(x_int, y_int)))
