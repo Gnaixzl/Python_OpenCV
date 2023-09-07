@@ -39,7 +39,7 @@ def encode_and_push_image(image):
 
     # socket服务
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect(('192.168.16.246', 11112))
+    s.connect(('127.0.0.1', 9999))
 
     # 发送数据
     s.sendall(bytes_img)
